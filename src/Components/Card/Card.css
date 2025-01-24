@@ -5,7 +5,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 16px;
   max-width: 300px;
-  width: 100%; /* Ensure the card occupies full width in the grid */
+  width: 100%;
 }
 
 .card-image {
@@ -19,13 +19,12 @@
 }
 
 .card-title {
-  font-size: 1.5em;
-  margin: 0 0 8px 0;
+  font-size: 20px;
 }
 
 .card-description {
   font-size: 1em;
-  color: #666;
+  color: #000000;
 }
 
 .card-author,
@@ -48,9 +47,53 @@
   font-size: 0.9em;
 }
 
+.c2-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: -29px;
+  text-align:inherit;
+}
+
+.left {
+  flex: 0 0 20%; /* 20% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c2-image {
+  width: 50px; /* Diameter of the circular image */
+  height: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  margin-top: -120px;
+}
+
+.right {
+  flex: 0 0 80%; /* 80% width */
+}
+
 /* Media query for screen sizes less than 920px */
 @media (max-width: 920px) {
   .card {
-    width: 90%; /* Occupy 90% of the screen width */
+    width: 90%;
+    max-width: 1000px;
+  }
+  .c2-image {
+    width: 50px; /* Diameter of the circular image */
+    height: 50px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-top: -30px;
+  }
+  .right{
+    margin-left: -20px;
+    text-justify: auto;
+  }
+  .card-description {
+    font-size: 1em;
+    color: #000000;
+    margin-top: -15px;
   }
 }
